@@ -1,5 +1,7 @@
 # RESTful Applications with Zend Framework [Example]
 
-This is an **example** to demonstrate the usage of [RESTful Zend Framework Extension](https://github.com/ahmadnassri/restful-zend-framework) which allows to create RESTful Controllers with ease.
+This is an **example** to demonstrate how to create REST API with Zend framework Ver. 1.x and consume Web services with AngularJS + Google Material design.
 
-for implementation details please refer to [github.com/ahmadnassri/restful-zend-framework](https://github.com/ahmadnassri/restful-zend-framework).
+Refferences:
+https://github.com/ahmadnassri/restful-zend-framework
+https://github.com/ahmadnassri/restful-zend-framework
