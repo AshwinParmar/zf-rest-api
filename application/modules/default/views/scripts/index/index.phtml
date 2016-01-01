@@ -7,88 +7,68 @@
 	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
 	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="/assets/js/angular.min.js"></script>
+	<script src="/assets/js/app.js"></script>
 </head>
 
-<body>
+<body ng-app="App">
 
-	<!-- Uses a transparent header that draws on top of the layout's background -->
+	<!-- Uses a header that contracts as the page scrolls down. -->
 	<style>
-	.demo-layout-transparent {
-	  background: url('../assets/images/transparent.jpg') center / cover;
-	}
-	.demo-layout-transparent .mdl-layout__header,
-	.demo-layout-transparent .mdl-layout__drawer-button {
-	  /* This background is dark, so we set text to white. Use 87% black instead if
-		 your background is light. */
-	  color: white;
+	.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+	  padding-right: 0;
 	}
 	</style>
 
-	<div class="demo-layout-transparent mdl-layout mdl-js-layout">
-	  <header class="mdl-layout__header mdl-layout__header--transparent">
+	<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+	  <header class="mdl-layout__header mdl-layout__header--waterfall">
+		<!-- Top row, always visible -->
 		<div class="mdl-layout__header-row">
 		  <!-- Title -->
-		  <span class="mdl-layout-title">Navigation</span>
-		  <!-- Add spacer, to align navigation to the right -->
+		  <span class="mdl-layout-title">API</span>
+		  <div class="mdl-layout-spacer"></div>
+		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+					  mdl-textfield--floating-label mdl-textfield--align-right">
+			<label class="mdl-button mdl-js-button mdl-button--icon"
+				   for="waterfall-exp">
+			  <i class="material-icons">search</i>
+			</label>
+			<div class="mdl-textfield__expandable-holder">
+			  <input class="mdl-textfield__input" type="text" name="sample"
+					 id="waterfall-exp">
+			</div>
+		  </div>
+		</div>
+		<!-- Bottom row, not visible on scroll -->
+		<div class="mdl-layout__header-row">
 		  <div class="mdl-layout-spacer"></div>
 		  <!-- Navigation -->
 		  <nav class="mdl-navigation">
-			<a class="mdl-navigation__link" href="">Link</a>
-			<a class="mdl-navigation__link" href="">Link</a>
-			<a class="mdl-navigation__link" href="">Link</a>
-			<a class="mdl-navigation__link" href="">Link</a>
+			<a class="mdl-navigation__link" href="">Customer</a>
+			<a class="mdl-navigation__link" href="">Product</a>
+			<a class="mdl-navigation__link" href="">Category</a>
+			<a class="mdl-navigation__link" href="">Contact</a>
 		  </nav>
 		</div>
 	  </header>
 	  <div class="mdl-layout__drawer">
 		<span class="mdl-layout-title">Title</span>
 		<nav class="mdl-navigation">
-		  <a class="mdl-navigation__link" href="">Link</a>
-		  <a class="mdl-navigation__link" href="">Link</a>
-		  <a class="mdl-navigation__link" href="">Link</a>
-		  <a class="mdl-navigation__link" href="">Link</a>
+		  <a class="mdl-navigation__link" href="">Customer</a>
+		  <a class="mdl-navigation__link" href="">Product</a>
+		  <a class="mdl-navigation__link" href="">Category</a>
+		  <a class="mdl-navigation__link" href="">Contact</a>
 		</nav>
 	  </div>
 	  <main class="mdl-layout__content">
+		<div class="page-content">
+			<!-- Your content goes here -->
+			<div class="" ng-controller="CustomerCtrl">
+				<h1>{{App_Title}}</h1>
+			</div>
+		</div>
 	  </main>
 	</div>
-	
-	<header>
-		<nav>
-			<ul>
-				<li>Your menu</li>
-			</ul>
-		</nav>
-	</header>
-	
-	<section>
-	
-		<article>
-			<header>
-				<h2>Article title</h2>
-				<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
-			</header>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		</article>
-		
-		<article>
-			<header>
-				<h2>Article title</h2>
-				<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
-			</header>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		</article>
-		
-	</section>
-
-	<aside>
-		<h2>About section</h2>
-		<p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-	</aside>
-
-	<footer>
-		<p>Copyright 2009 Your name</p>
-	</footer>
 
 </body>
 
